@@ -1,6 +1,6 @@
 # Čevora.xyz static site
 
-Local HTML and CSS copy of the public website. Nothing here is published. The live WordPress site is unchanged.
+Local HTML and CSS copy of the public website. GitHub Pages serves this repository from the root of `main`, so `index.html` stays at the top. The live WordPress site is unchanged.
 
 ## Preview
 

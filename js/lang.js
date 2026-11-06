@@ -1,25 +1,18 @@
 (function () {
   var key = "cevora-lang";
-  var path = location.pathname.replace(/index\.html$/i, "");
-
-  if (path.slice(-1) !== "/") {
-    path += "/";
-  }
-
-  var isEnHome = /\/en\/$/.test(path);
-  var isCsHome = path === "/";
+  var home = document.documentElement.getAttribute("data-home");
   var stored = null;
 
   try {
     stored = localStorage.getItem(key);
   } catch (error) {}
 
-  if (isCsHome && stored !== "cs") {
+  if (home === "cs" && stored !== "cs") {
     location.replace("en/");
     return;
   }
 
-  if (isEnHome && stored === "cs") {
+  if (home === "en" && stored === "cs") {
     location.replace("../");
     return;
   }
