@@ -1,0 +1,320 @@
+/* Čevora.xyz — one shared stylesheet.
+   Wide heading area, narrow centred reading column. */
+
+@font-face {
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("fonts/SourceSerif4Variable-Roman.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("fonts/SourceSerif4Variable-Italic.woff2") format("woff2");
+}
+
+:root {
+  --font-serif: "Source Serif Pro", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --content-width: 650px;
+  --wide-width: 1000px;
+  --gap: 1.5rem;
+  --outer: max(1.25rem, 5vw);
+  --title-size: clamp(2.75rem, 6vw, 3.25rem);
+  --section-size: clamp(2.25rem, 4vw, 2.75rem);
+  --title-gap: clamp(2rem, 8vw, 6rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: #ffffff;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #000000;
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.skip-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+.skip-link:focus {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 100000;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 15px 23px 14px;
+  clip-path: none;
+  background: #eeeeee;
+  color: #444444;
+  font-size: 1em;
+  line-height: normal;
+  text-decoration: none;
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+.page {
+  padding-right: var(--outer);
+  padding-left: var(--outer);
+}
+
+.rule {
+  display: block;
+  height: 0;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  border-top: 2px solid #808080;
+  background: none;
+}
+
+.rule-wide {
+  max-width: var(--wide-width);
+  opacity: 0.4;
+}
+
+.rule-short {
+  width: 100px;
+  margin-bottom: var(--gap);
+}
+
+h1,
+h2,
+h3,
+h5 {
+  margin: 0;
+  font-weight: 300;
+}
+
+h1 {
+  margin: var(--gap) 0 var(--title-gap);
+  padding-right: 2.75rem;
+  font-family: var(--font-serif);
+  font-size: var(--title-size);
+  line-height: 1.15;
+}
+
+.lang-switch {
+  position: absolute;
+  z-index: 2;
+  top: 0.7rem;
+  right: var(--outer);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+h2 {
+  font-family: var(--font-serif);
+  font-size: var(--title-size);
+  line-height: 1.2;
+}
+
+h3 {
+  font-family: var(--font-serif);
+  font-size: var(--section-size);
+  line-height: 1.15;
+}
+
+h5 {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25ch;
+}
+
+a:hover,
+a:focus {
+  text-decoration-style: dashed;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+.content {
+  max-width: var(--content-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.content > * + * {
+  margin-top: var(--gap);
+}
+
+.content h2,
+.content h3,
+.content h5,
+.content p,
+.content ul,
+.content .video,
+.content .rule {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.content .rule-short {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.content ul {
+  margin-top: var(--gap);
+  margin-bottom: 0;
+  padding-left: 40px;
+}
+
+.content > ul:first-child {
+  margin-top: 0;
+}
+
+.content li {
+  margin: 0;
+}
+
+.portrait {
+  display: block;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.portrait-jiri {
+  width: 310px;
+}
+
+.portrait-kate {
+  width: 247px;
+}
+
+.portrait-alzbeta {
+  width: 252px;
+}
+
+.portrait-peter {
+  width: 299px;
+}
+
+.portrait-nikola {
+  width: 247px;
+}
+
+.team {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+
+.team-column {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.person + .person {
+  margin-top: var(--gap);
+}
+
+.person-name {
+  margin: 0;
+  text-align: center;
+}
+
+.person-role {
+  margin: var(--gap) 0 0;
+  text-align: center;
+}
+
+.person-photo {
+  display: block;
+  width: 100%;
+  margin-top: var(--gap);
+}
+
+a.person-photo,
+a.person-photo:hover,
+a.person-photo:focus,
+a.person-photo:active {
+  text-decoration: none;
+}
+
+.person-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 781px) {
+  .team {
+    flex-direction: column;
+  }
+
+  .team-column {
+    flex-basis: auto;
+    width: 100%;
+  }
+}
