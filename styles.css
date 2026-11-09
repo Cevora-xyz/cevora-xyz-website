@@ -121,6 +121,7 @@ h1 {
   font-family: var(--font-serif);
   font-size: var(--title-size);
   line-height: 1.15;
+  text-align: left;
 }
 
 .lang-switch {
@@ -154,6 +155,29 @@ h5 {
 
 p {
   margin: 0;
+}
+
+.masthead {
+  max-width: var(--wide-width);
+  margin-bottom: var(--title-gap);
+}
+
+.masthead h1 {
+  margin-bottom: 1.25rem;
+}
+
+.masthead .rule {
+  margin: 0;
+}
+
+.masthead .tagline {
+  margin: 1.25rem 0 0;
+  padding-right: 2.75rem;
+  font-family: var(--font-serif);
+  font-size: clamp(2.15rem, 4.75vw, 2.6rem);
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: left;
 }
 
 a {
