@@ -166,6 +166,14 @@ p {
   margin-bottom: 1.25rem;
 }
 
+.masthead h1 a,
+.masthead h1 a:hover,
+.masthead h1 a:focus,
+.masthead h1 a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
 .masthead .rule {
   margin: 0;
 }
