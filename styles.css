@@ -178,6 +178,19 @@ p {
   margin: 0;
 }
 
+.case-study .masthead {
+  margin-bottom: 1.25rem;
+}
+
+.case-study .page-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--title-size);
+  font-weight: 300;
+  line-height: 1.15;
+  text-align: left;
+}
+
 .masthead .tagline {
   margin: 1.25rem 0 0;
   padding-right: 2.75rem;
